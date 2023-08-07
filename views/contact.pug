@@ -1,0 +1,55 @@
+extends base.pug
+
+block scripts
+    script(src="/static/index.js")
+
+block style
+    style
+        include ../static/style.css
+        include ../static/responsive.css
+        include ../static/desktop.css
+        include ../static/contact.css
+
+block content
+    div.container
+        h1 Contact Us
+        form(action="/contact", method="post", class="myForm")
+            input(type="text", class="myInput", name="name", placeholder="Enter your name..")
+            input(type="text", class="myInput", name="phone", placeholder="Enter your phone..")
+            input(type="text", class="myInput", name="email", placeholder="Enter your email..")
+            input(type="text", class="myInput", name="about", placeholder="About Yourself..")
+            button(class="btn") Submit
+
+    script.
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.myForm');
+
+            form.addEventListener('submit', async function (event) {
+                event.preventDefault();
+
+                // Perform form submission using fetch or another method
+                const formData = new FormData(form);
+                const response = await fetch('/contact', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                // Display alert message based on the response
+                const alertContainer = document.createElement('div');
+                alertContainer.classList.add('alert');
+                if (response.ok) {
+                    alertContainer.classList.add('alert-success');
+                    alertContainer.textContent = 'Form submitted successfully!';
+                } else {
+                    alertContainer.classList.add('alert-danger');
+                    alertContainer.textContent = 'Form submission failed. Please try again later.';
+                }
+
+                document.body.insertBefore(alertContainer, document.querySelector('.container'));
+                setTimeout(() => {
+                    alertContainer.remove();
+                }, 5000);
+            });
+        });
+
+                       

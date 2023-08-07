@@ -1,0 +1,65 @@
+doctype html
+html
+  head
+    title Abhii's Dance Academy
+    style   
+        include ../static/style.css
+        include ../static/responsive.css
+        include ../static/desktop.css
+
+
+    body 
+    
+      nav#navbar
+        ul
+            div#logo
+                img(src="https://www.seekpng.com/png/detail/760-7603373_street-dance-png-hiphop-dance-logo-design.png")
+                |ABA
+            li #[a(href="/") Home]
+            li #[a(href="/") About]
+            li #[a(href="/") Services]
+            li #[a(href="/") Class Info]
+            li #[a(href="/") Contact Us]
+
+    section#introSection
+        div Welcome to Abhii's Dance Academy
+        div.small Eat Dance Sleep Repeat
+
+    section#missionSection
+        h2 Our Mission
+        div.card
+            h3 Dance Perfection
+            div.card-box
+                div.card-img
+                    img(src="https://toppng.com/uploads/preview/hip-hop-dancer-silhouette-png-download-dance-silhouette-transparent-11563545000as83bdqpfy.png")
+                div.card-content
+                    p This is the best dance academy of the universe
+
+        div.card
+            h3 Dance the way you like
+            div.card-box
+                div.card-img
+                    img(src="https://banner2.cleanpng.com/20180504/dbw/kisspng-competitive-dance-logo-dance-troupe-choreography-5aecdb9c2d4a55.2980942415254721561855.jpg")
+                div.card-content
+                    p This is the best dance academy of the universe
+
+        div.card
+            h3 Expert Teaching
+            div.card-box
+                div.card-img
+                    img(src="https://png.pngtree.com/element_our/20190531/ourmid/pngtree-dance-class-dancing-girl-silhouette-image_1322612.jpg")
+                div.card-content
+                    p This is the best dance academy of the universe
+
+    section#sponsorsSection
+            h2 Our Sponsors
+            div#sponsors
+                img(src="https://wallpapers.com/images/featured/uzxvz854vxuglpqy.jpg", alt="Sponsor Image", class="spImage")
+                img(src="https://w7.pngwing.com/pngs/645/893/png-transparent-windows-11-logo-windows-11-wallpaper-windows-11-background.png", alt="Sponsor Image", class="spImage")
+                img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6NAPHyOK_sRVW35hEEWIuDdBQjDcu2dWcr-7iI3NBvGd96oAtE394YHi0yDtO1h1_4OuGejd93qE&usqp=CAU&ec=48600112", alt="Sponsor Image", class="spImage")
+                img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Skype_logo.svg/2560px-Skype_logo.svg.png", alt="Sponsor Image", class="spImage")
+                
+    footer#footer
+        | Copyright &#169; 2023 AbhiiAcademy.com | All Rights Reserved
+    script 
+     include ../static/index.js 

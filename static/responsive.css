@@ -1,0 +1,46 @@
+@media screen and (min-width: 375px) {
+ 
+*{
+  margin: 0;
+  padding: 0;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+#navbar {
+ 
+  padding: 39px 20px;
+}
+#navbar li a {
+  font-size: 31px;
+  }
+
+  #introSection{
+    height: 599px;
+  }
+  #missionSection {
+    padding: 27px;
+    height: 488px;
+    width: 105%;
+    margin-top: 95px;
+}
+
+#sponsorsSection {
+  height: 394px;
+}
+#sponsorsSection h2 {
+  padding-top: 83px;
+}
+.spImage {
+  height: 80px;
+  margin: 55px;
+}
+
+#footer {
+  height: 48px;
+  font-size: 40px;
+}
+
+}
