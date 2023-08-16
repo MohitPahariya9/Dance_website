@@ -33,14 +33,13 @@ app.post('/contact', (req, res)=>{
     email = req.body.email
     about = req.body.about
     
-
     let outputToWrite = `The name of the client is "${name}" \nEmail is "${email}"\nPhone no is "${phone} " \nCondition and goals: "${about}"`
     // fs.writeFileSync('output.txt', outputToWrite);
     fs.appendFileSync('output.txt', '\n' + outputToWrite );
     
 
  const params = {'message': 'Your form has been submitted successfully'}
- res.status(200).render('index.pug', params);
+ res.status(200).render('contact.pug', params);
 });
 
 //START THE SERVER
